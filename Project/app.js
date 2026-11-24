@@ -1,16 +1,11 @@
-//GLOBALS - NO Winfow
+//Modules
 
-/*__dirname -> path to current directory
-__filename -> file name
-require -> function to use modules (CommonJS)
-module -> info about current module (file)
-process -> info about enviroment where
-    the program is executed
-*/
+const names = require('./4-name')
+const sayHi = require('./5-utils')
+const data = require('./6-another-flavor')
+console.log(names)
+console.log(data)
 
-console.log(__dirname);
-console.log(__filename);
-
-setInterval(() => {
-    console.log('hello world')
-},3)
+sayHi('susan')
+sayHi(names.john)
+sayHi(names.peter)
